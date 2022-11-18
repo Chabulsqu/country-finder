@@ -1,0 +1,18 @@
+header {
+  background-color: var(--dark-text);
+}
+h1, em {
+    color: var(--light-text);
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  }
+  
+h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+  
+em {
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-style: normal;
+  }

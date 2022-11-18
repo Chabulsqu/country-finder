@@ -1,0 +1,10 @@
+input {
+    all: unset;
+    background-color: var(--dark-text);
+    border-radius: 3px;
+}
+input::placeholder {
+    opacity: 1;
+    color: var(--light-input);
+    font-size: 0.8rem;
+}
