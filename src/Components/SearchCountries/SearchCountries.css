@@ -1,0 +1,85 @@
+
+/* Countries boxes */
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+strong {
+    font-weight: 800;
+}
+main {
+    background-color: var(--bg-color);
+}
+article {
+    margin-top: 5vh;
+}
+section {
+    display: inline-block;
+    margin-left: min(48px, 12.5vw);
+    width: min(300px, 75vw);
+    background-color: var(--main-color);
+    margin-bottom: 10vh;
+    border-radius: 10px;
+}
+section h2, section strong {
+    margin-left: 10%;
+}
+
+
+/* Country Searchbar */
+
+.input-wrapper {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    width: min(800px, 90vw);
+    margin-left: min(29px, 5vw);
+    height: 5vh;
+    margin-bottom: 2.5vh;
+}
+input::placeholder {
+    opacity: .5;
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+input:focus {
+    all: unset;
+    width: min(200%, 100vw);
+    background-color: inherit;
+}
+
+#searchIcon {
+    width: 10%;
+}
+
+input {
+    all: unset;
+    width: min(95%, 80vw);
+    background-color: inherit;
+    color: var(--text-color);
+}
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+
+/* Filter Dropdown */
+
+select {
+    border-radius: 5px;
+    border: 0;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    width: min(160px, 40%);
+    height: min(10vw, 50px);   
+    margin-left: min(100px, 20vw, 5%); 
+}
+.input-wrapper, select, header, article {
+    border-bottom: 3px solid var(--shad-color) !important;
+    box-shadow: 10px 10px 19px -5px var(--shad-color);
+    -webkit-box-shadow: 10px 10px 19px -5px var(--shad-color);
+    -moz-box-shadow: 10px 10px 19px -5px var(--shad-color);
+}

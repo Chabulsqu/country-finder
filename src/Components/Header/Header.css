@@ -1,8 +1,12 @@
 header {
-  background-color: var(--dark-text);
+  background-color: var(--main-color);
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 h1, em {
-    color: var(--light-text);
+    
     font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
   }
   
@@ -16,3 +20,4 @@ em {
     font-weight: 600;
     font-style: normal;
   }
+  
