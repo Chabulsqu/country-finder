@@ -1,12 +1,14 @@
 import React from "react";
 import "./SearchCountries.css";
+import CountryPage from '../CountryPage/CountryPage';
 
 export default class Countries extends React.Component {
   constructor(props) {
     super(props);
     this.searchCountries = this.searchCountries.bind(this);
     this.filterCountries = this.filterCountries.bind(this);
-    this.state = { countries: [] };
+    this.changePage = this.changePage.bind(this);
+    this.state = { countries: [], page: 'main' };
   }
 
   async getAllCountries() {
@@ -51,9 +53,24 @@ export default class Countries extends React.Component {
     }
     this.setState({countries: filteredArray});
   }
+  changePage(event) {
+    if (this.state.page === 'main' || event.target.id !== "button") {
+      let countryName = event.target.id;
+      for (let country of this.state.defaultCountries) {
+        if (country.name.common != countryName) {
+          continue;
+        } else {
+          countryName = country;
+        }
+      }
+      this.setState({page: 'country', selectedCountry: countryName});
+    } else {
+      this.setState({page: 'main'});
+    }
+  }
 
   render() {
-    let counter = 0;
+    if (this.state.page === 'main') {
     return (
       <main>
         <form>
@@ -74,22 +91,25 @@ export default class Countries extends React.Component {
         <article>
           {this.state.countries.map((country) => {
             return (
-              <section key={counter++}>
-                <img src={country.flags.png} alt=" " />
-                <h2>{country.name.common}</h2>
-                <strong>Population: </strong> {country.population}
-                <br />
-                <strong>Region: </strong> {country.region}
-                <br />
-                <strong>Capital: </strong> {}
-                <br />
-                <br />
+              <section key={country.name.common} id={country.name.common} onClick={this.changePage}>
+                <img src={country.flags.svg} alt=" " id={country.name.common} />
+                <h2 id={country.name.common}>{country.name.common}</h2>
+                <strong id={country.name.common}>Population: </strong> {country.population}
+                <br id={country.name.common} />
+                <strong id={country.name.common}>Region: </strong> {country.region}
+                <br id={country.name.common} />
+                <strong id={country.name.common}>Capital: </strong> {country.capital ? country.capital[0] : 'Unknown'}
+                <br id={country.name.common} />
+                <br id={country.name.common} />
               </section>
             );
           })}
         </article>
       </main>
     );
+    } else {
+      return <CountryPage country={this.state.selectedCountry} method={this.changePage} defaultCountries={this.state.defaultCountries} />;
+    }
   }
 
   async componentDidMount() {

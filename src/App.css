@@ -5,29 +5,45 @@
 .App {
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 header, form, article {
   padding: clamp(5px, 0.5vw, 20px);
   width: 100vw;
-  color: var(--text-color)
+  color: var(--text-color);
 } 
 img {
-  width: min(320px, 99%);
+  width: min(480px, 99%);
   height: 99%;
+  display: inline-block;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+strong, h3, h1 {
+  line-height: 1.8;
 }
 
 .light {
   --text-color: hsl(200, 15%, 8%);
   --main-color: hsl(0, 0%, 100%);
   --bg-color: hsl(0, 0%, 98%);
-  --shad-color: (0, 0%, 52%)
+  --shad-color: hsl(0, 0%, 52%);
 }
 .dark {
   --text-color: hsl(0, 0%, 100%);
   --main-color: hsl(209, 23%, 22%);
   --bg-color: hsl(207, 26%, 17%);
 }
+
+.input-wrapper, select, header, section .button-container, .country-border {
+  box-shadow: 10px 9px 44px -1px var(--shad-color);
+  -webkit-box-shadow: 10px 9px 44px -1px var(--shad-color);
+  -moz-box-shadow: 10px 9px 44px -1px var(--shad-color);
+}
+
 
   /* nunito-sans-300 - latin */
 @font-face {

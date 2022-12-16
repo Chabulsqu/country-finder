@@ -21,6 +21,7 @@ section {
     background-color: var(--main-color);
     margin-bottom: 10vh;
     border-radius: 10px;
+    cursor: pointer;
 }
 section h2, section strong {
     margin-left: 10%;
@@ -46,7 +47,7 @@ input::placeholder {
 }
 input:focus {
     all: unset;
-    width: min(200%, 100vw);
+    width: min(95%, 80vw);
     background-color: inherit;
 }
 
@@ -60,10 +61,6 @@ input {
     background-color: inherit;
     color: var(--text-color);
 }
-button {
-    all: unset;
-    cursor: pointer;
-}
 
 
 /* Filter Dropdown */
@@ -76,10 +73,4 @@ select {
     width: min(160px, 40%);
     height: min(10vw, 50px);   
     margin-left: min(100px, 20vw, 5%); 
-}
-.input-wrapper, select, header, article {
-    border-bottom: 3px solid var(--shad-color) !important;
-    box-shadow: 10px 10px 19px -5px var(--shad-color);
-    -webkit-box-shadow: 10px 10px 19px -5px var(--shad-color);
-    -moz-box-shadow: 10px 10px 19px -5px var(--shad-color);
 }
