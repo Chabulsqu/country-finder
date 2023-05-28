@@ -1,6 +1,9 @@
 # Frontend Mentor - REST Countries API with color theme switcher solution
+## Warning: The API the project uses has been shut down by its maintainer because of a lack of funding. The project will not run correctly either locally or in Netlify. 
 
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+This project is split into two branches: master (the first implementation I did while I was still learning React, highly buggy and inefficient) and the experimental one (It uses Function components instead of classes and adds React Router for dynamic routing, unfortunately, I was not able to finish it because the API was shut down while I was refactoring it).
 
 ## Table of contents
 
@@ -24,13 +27,16 @@ Users should be able to:
 - See all countries from the API on the homepage
 - Search for a country using an `input` field
 - Filter countries by region
+- Toggle the color scheme between light and dark mode 
+
+** Pending features (will be added as soon as I find a replacement for the API): **
+
 - Click on a country to see more detailed information on a separate page
 - Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
 
 ### Screenshot
 
-![Website main page seen on dark mode](./screenshot.png)
+![Website main page saw on dark mode](./screenshot.png)
 
 ### Links
 
@@ -45,10 +51,11 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- [React Router V6](https://reactrouter.com/en/main/start/tutorial) - Client-side routing with React.
 
 ### What I learned
 
-This project helped me reinforce my knowledge on React topics like passing down methods as props and changing the state. It also helped me to make shorter CSS by using the min() and max() function, in fact, this project was only made using one breakpoint.
+This project helped me reinforce my knowledge of React topics like passing down methods as props and changing the state. It also helped me to make shorter CSS by using the min() and max() functions, this project was only made using one breakpoint.
 ```css
 
 div {
@@ -65,13 +72,13 @@ render() {
 
 ### Continued development
 
-- clamp() function in CSS: I understand its basic functionality but I'm not as fluent on it as I'm with min() and max().
-- React Function Components: Usually I work with classes but I will probably start using functions as soon as I get comfortable with them.
+- clamp() function in CSS: I understand its basic functionality but I'm not as fluent in it as I'm with min() and max().
+- React Function Components: Usually, I work with classes but I will probably start using functions as soon as I get comfortable with them.
 
 ### Useful resources
 
 - [Kevin Powell CSS videos](https://www.youtube.com/watch?v=bn-DQCifeQQ&t=1512s) - This helped me a lot to make faster and more effective responsive designs. I will keep using this strategy in the future.
-- [CSS Tricks](https://css-tricks.com) - Every time I have some doubt with CSS, I always look up for this page!
+- [CSS Tricks](https://css-tricks.com) - Every time I have doubts with CSS, I always look up to this page!
 
 ## Author
 
