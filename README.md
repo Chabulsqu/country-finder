@@ -31,7 +31,7 @@ Users should be able to:
 - Filter countries by region
 - Toggle the color scheme between light and dark mode 
 
-** Pending features (will be added as soon as I find a replacement for the API): **
+**Pending features (will be added as soon as I find a replacement for the API):**
 
 - Click on a country to see more detailed information on a separate page
 - Click through to the border countries on the detail page
